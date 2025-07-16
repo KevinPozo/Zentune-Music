@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zentune Music</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Overlay oscuro para el fondo -->
+  <div id="background-overlay"></div>
+  <header>
+    <h1>Zentune Music</h1>
+  </header>
+  <main>
+    <section id="search-section">
+      <form id="artist-search-form" style="display:flex;justify-content:center;gap:0.5rem;">
+        <input type="text" id="search-input" placeholder="Buscar artista...">
+        <button type="submit">Buscar</button>
+      </form>
+    </section>
+    <section id="song-filter-section" style="display:none; margin-bottom:1.5rem; text-align:center;">
+      <div id="song-chips"></div>
+    </section>
+    <section id="artists-list">
+      <!-- Aquí aparecerán los artistas y sus canciones -->
+    </section>
+    <section id="player">
+      <div id="visualizer"></div>
+      <div id="now-playing"></div>
+      <div id="custom-controls" style="display:none; margin-bottom:1rem;">
+        <button id="prev-btn" class="player-ctrl">⏮️</button>
+        <button id="playpause-btn" class="player-ctrl">⏸️</button>
+        <button id="next-btn" class="player-ctrl">⏭️</button>
+        <span id="current-time">0:00</span>
+        <div id="progress-bar-container">
+          <div id="progress-bar-bg">
+            <div id="progress-bar"></div>
+          </div>
+        </div>
+        <span id="duration">0:00</span>
+      </div>
+      <div id="youtube-player-container" style="display:none; margin-bottom:1rem; position:relative;">
+        <div id="yt-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;"></div>
+      </div>
+      <div id="queue-section"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html> 
