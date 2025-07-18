@@ -7,10 +7,10 @@ const nowPlaying = document.getElementById('now-playing');
 // Elimina el código anterior de búsqueda y FMA
 
 // Cambiar la constante GIF_URL a la ruta local
-const GIF_URL = 'Fondo.gif';
+const GIF_URL = 'assets/Fondo.gif';
 
 // Cambiar la constante del PNG
-const PNG_FONDO = 'Fondo2.png';
+const PNG_FONDO = 'assets/Fondo2.png';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const artistsList = document.getElementById('artists-list');
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Cargar la lista de canciones NCS
   try {
-    const res = await fetch('ncs_tracks.json');
+    const res = await fetch('data/ncs_tracks.json');
     allArtists = await res.json();
   } catch (e) {
     artistsList.innerHTML = '<p>Error al cargar la lista de canciones.</p>';
@@ -198,9 +198,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
+  const songDropdownContainer = document.getElementById('song-dropdown-container');
+  const songDropdown = document.getElementById('song-dropdown');
+  let lastArtistFiltered = null;
+
   // Renderizar artistas y canciones
   function renderArtists(filter = '') {
     artistsList.innerHTML = '';
+    let filteredArtist = null;
     allArtists.forEach(artistObj => {
       // Filtrar canciones por búsqueda
       const filteredSongs = artistObj.songs.filter(song => {
@@ -211,6 +216,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         );
       });
       if (filteredSongs.length === 0) return;
+      // Si solo hay un artista filtrado, mostrar el dropdown
+      if (!filteredArtist) filteredArtist = artistObj;
       // Crear carpeta de artista
       const folder = document.createElement('div');
       folder.className = 'artist-folder';
@@ -274,6 +281,25 @@ document.addEventListener('DOMContentLoaded', async () => {
       };
       artistsList.appendChild(folder);
     });
+    // Mostrar el dropdown solo si hay un artista filtrado
+    if (filteredArtist) {
+      songDropdownContainer.style.display = 'flex';
+      songDropdown.innerHTML = '';
+      const allOpt = document.createElement('option');
+      allOpt.value = 'all';
+      allOpt.textContent = 'Todas las canciones';
+      songDropdown.appendChild(allOpt);
+      filteredArtist.songs.forEach((song, idx) => {
+        const opt = document.createElement('option');
+        opt.value = idx;
+        opt.textContent = song.title;
+        songDropdown.appendChild(opt);
+      });
+      lastArtistFiltered = filteredArtist;
+    } else {
+      songDropdownContainer.style.display = 'none';
+      lastArtistFiltered = null;
+    }
   }
 
   // Búsqueda en tiempo real
@@ -301,9 +327,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function formatTime(sec) {
     sec = Math.floor(sec);
-    const m = Math.floor(sec / 60);
+    const h = Math.floor(sec / 3600);
+    const m = Math.floor((sec % 3600) / 60);
     const s = sec % 60;
-    return `${m}:${s.toString().padStart(2, '0')}`;
+    if (h > 0) {
+      return `${h}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+    } else {
+      return `${m}:${s.toString().padStart(2, '0')}`;
+    }
   }
 
   function updateProgressBar() {
@@ -405,7 +436,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const overlay = document.getElementById('background-overlay');
     // Fondo especial para Radio Lo-Fi o canciones Lofi
     if ((artistObj.artist && artistObj.artist.toLowerCase().includes('lo-fi')) || (song.genre && song.genre.toLowerCase().includes('lofi'))) {
-      overlay.style.background = `linear-gradient(rgba(20,20,30,0.4), rgba(20,20,30,0.4)), url('FondoLoffi.gif') center center / cover no-repeat`;
+      overlay.style.background = `linear-gradient(rgba(20,20,30,0.4), rgba(20,20,30,0.4)), url('assets/FondoLoffi.gif') center center / cover no-repeat`;
     } else {
       overlay.style.background = `linear-gradient(rgba(20,20,30,0.4), rgba(20,20,30,0.4)), url('${GIF_URL}') center center / cover no-repeat`;
     }
@@ -584,6 +615,76 @@ document.addEventListener('DOMContentLoaded', async () => {
     songFilterSection.style.display = 'block';
   }
 
+  // Evento para filtrar canciones al seleccionar en el dropdown
+  songDropdown.addEventListener('change', function() {
+    if (!lastArtistFiltered) return;
+    if (songDropdown.value === 'all') {
+      renderArtists(lastArtistFiltered.artist); // Muestra todas las canciones del artista filtrado
+      return;
+    }
+    const idx = parseInt(songDropdown.value);
+    if (isNaN(idx)) return;
+    // Filtrar la lista para mostrar solo la canción seleccionada
+    artistsList.innerHTML = '';
+    const artistObj = lastArtistFiltered;
+    const song = artistObj.songs[idx];
+    const folder = document.createElement('div');
+    folder.className = 'artist-folder open';
+    const header = document.createElement('div');
+    header.className = 'artist-header';
+    header.innerHTML = `<span class="artist-color" style="background:${artistObj.color}"></span>${artistObj.artist}`;
+    folder.appendChild(header);
+    const songsDiv = document.createElement('div');
+    songsDiv.className = 'artist-songs';
+    const songDiv = document.createElement('div');
+    songDiv.className = 'song-item';
+    // Info
+    const info = document.createElement('div');
+    info.className = 'song-info';
+    info.innerHTML = `
+      <img class="song-cover" src="${song.cover}" alt="cover">
+      <div class="song-meta">
+        <span class="song-title">${song.title}</span>
+        <span class="song-artist">${artistObj.artist}</span>
+        <span class="song-extra">${song.genre} • ${song.year} • ${song.duration}</span>
+      </div>
+    `;
+    // Acciones
+    const actions = document.createElement('div');
+    actions.className = 'song-actions';
+    // Botón reproducir
+    const playBtn = document.createElement('button');
+    playBtn.className = 'song-btn';
+    playBtn.innerHTML = '▶️';
+    playBtn.onclick = () => playTrack(song, artistObj);
+    actions.appendChild(playBtn);
+    // Botón favoritos
+    const favBtn = document.createElement('button');
+    favBtn.className = 'song-btn fav' + (isFav(song) ? ' active' : '');
+    favBtn.innerHTML = '★';
+    favBtn.onclick = () => toggleFav(song, artistObj);
+    actions.appendChild(favBtn);
+    // Botón agregar a cola
+    const queueBtn = document.createElement('button');
+    queueBtn.className = 'song-btn';
+    queueBtn.innerHTML = '➕';
+    queueBtn.title = 'Agregar a la cola';
+    queueBtn.onclick = () => addToQueue(song, artistObj);
+    actions.appendChild(queueBtn);
+    // Botón compartir
+    const shareBtn = document.createElement('button');
+    shareBtn.className = 'song-btn share';
+    shareBtn.title = 'Compartir';
+    shareBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98"/><path d="M15.41 6.51l-6.82 3.98"/></svg>`;
+    shareBtn.onclick = () => window.open(song.youtube, '_blank');
+    actions.appendChild(shareBtn);
+    songDiv.appendChild(info);
+    songDiv.appendChild(actions);
+    songsDiv.appendChild(songDiv);
+    folder.appendChild(songsDiv);
+    artistsList.appendChild(folder);
+  });
+
   // Render inicial (muestra todos los artistas y oculta chips)
   renderArtists();
   renderFavs();
@@ -594,4 +695,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   // En la carga inicial (DOMContentLoaded), dejar solo el fondo oscuro:
   overlayInit.style.background = 'rgba(20,20,30,0.4)';
   // El GIF solo se aplica en playTrack (cuando se reproduce una canción).
-}); 
+});
+
+function updateDateTime() {
+  const dt = new Date();
+  const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+  const dateStr = dt.toLocaleDateString('es-ES', options);
+  const timeStr = dt.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  document.getElementById('datetime').textContent = `${dateStr} | ${timeStr}`;
+}
+setInterval(updateDateTime, 1000);
+updateDateTime(); 

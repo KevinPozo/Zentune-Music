@@ -15,6 +15,7 @@ header {
   padding: 1.5rem 0;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: relative;
 }
 h1 {
   margin: 0 0 1rem 0;
@@ -118,12 +119,18 @@ main {
   justify-content: center;
   margin-bottom: 1.5rem;
 }
+#artist-search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 600px;
+}
 #search-input {
-  padding: 0.7rem 1.2rem;
-  border-radius: 6px;
-  border: none;
-  width: 320px;
-  font-size: 1.1rem;
+  flex: 1 1 350px;
+  min-width: 180px;
+  max-width: 400px;
 }
 
 /* Lista de artistas y canciones */
@@ -456,19 +463,35 @@ body > *:not(#background-overlay) {
 #main-content {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 2rem 0 2rem 1.5rem;
+  padding: 0 0.5rem 0 0;
+  justify-content: flex-start;
 }
 #playlist-section {
-  flex: 0 0 350px;
-  min-width: 280px;
-  max-width: 400px;
+  flex: 0 0 420px;
+  min-width: 320px;
+  max-width: 480px;
 }
 #player-section {
   flex: 1 1 0%;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 800px;
+  margin-top: 4.6rem;
+}
+#youtube-player-container {
+  max-width: 100%;
+  min-height: 420px;
+  height: 420px;
+}
+#youtube-player-container iframe, #ytplayer {
+  width: 100% !important;
+  height: 420px !important;
+  min-height: 420px !important;
 }
 @media (max-width: 900px) {
   #main-content {
@@ -499,4 +522,40 @@ body > *:not(#background-overlay) {
   background: #ff1744 !important;
   border: 2px solid #fff;
   box-shadow: 0 0 8px #ff1744, 0 0 16px #ff5252;
+} 
+#datetime {
+  color: #00e6fb;
+  text-shadow: 0 0 8px #00e6fb, 0 0 16px #1a1aff;
+  font-weight: bold;
+  position: absolute;
+  top: 2.2rem;
+  right: 2.5rem;
+  background: rgba(20,20,30,0.7);
+  padding: 0.3rem 1rem;
+  border-radius: 12px;
+  letter-spacing: 1px;
+  z-index: 10;
+} 
+#song-dropdown-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+#song-dropdown {
+  min-width: 220px;
+  max-width: 400px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  background: #fff;
+  color: #222;
+  border: 2px solid #1db954;
+  box-shadow: 0 0 8px #1db95444, 0 0 16px #1db95422;
+  font-weight: bold;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+#song-dropdown:focus {
+  border: 2.5px solid #1db954;
+  box-shadow: 0 0 16px #1db95488, 0 0 32px #1db95444;
 } 

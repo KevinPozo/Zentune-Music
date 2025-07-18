@@ -18,6 +18,38 @@
         "duration": "1:35:24",
         "year": 2022,
         "genre": "Lofi"
+      },
+      {
+        "title": "Best of lofi hip hop",
+        "youtube": "https://www.youtube.com/watch?v=n61ULEU7CO0&list=RDn61ULEU7CO0&start_radio=1",
+        "cover": "https://i1.sndcdn.com/artworks-000123456789-abcdef-t500x500.jpg",
+        "duration": "6:10:57",
+        "year": 2021,
+        "genre": "Lofi"
+      },
+      {
+        "title": "90's Chill Lofi",
+        "youtube": "https://www.youtube.com/watch?v=sF80I-TQiW0",
+        "cover": "https://i1.sndcdn.com/artworks-000123456789-abcdef-t500x500.jpg",
+        "duration": "11:53:44",
+        "year": 2024,
+        "genre": "Lofi"
+      },
+      {
+        "title": "1 A.M Study Session",
+        "youtube": "https://www.youtube.com/watch?v=lTRiuFIWV54",
+        "cover": "https://i1.sndcdn.com/artworks-000123456789-abcdef-t500x500.jpg",
+        "duration": "1:01:13",
+        "year": 2019,
+        "genre": "Lofi"
+      },
+      {
+        "title": "Less talk.... more action",
+        "youtube": "https://www.youtube.com/watch?v=9kzE8isXlQY&list=RD9kzE8isXlQY&start_radio=1",
+        "cover": "https://i1.sndcdn.com/artworks-000123456789-abcdef-t500x500.jpg",
+        "duration": "3:25:32",
+        "year": 2025,
+        "genre": "Lofi"
       }
     ]
   },
@@ -101,6 +133,49 @@
       {"title": "Invincible Part II [NCS Release]", "youtube": "https://www.youtube.com/watch?v=SA1ESPFd3LQ&list=RDSA1ESPFd3LQ&start_radio=1", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:20", "year": 2021, "genre": "Electronic"},
       {"title": "Safe & Sound [NCS Release]", "youtube": "https://www.youtube.com/watch?v=Wz5ZVnzYZWk&list=RDWz5ZVnzYZWk&start_radio=1", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:29", "year": 2020, "genre": "Electronic"},
       {"title": "Destiny [NCS Release]", "youtube": "https://www.youtube.com/watch?v=-mMmOKHzuWc&list=RD-mMmOKHzuWc&start_radio=1", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:48", "year": 2021, "genre": "Electronic"}
+    ]
+  },
+  {
+    "artist": "K391 [NCS Release] [Sunshine]",
+    "color": "#b1ba2f",
+    "songs": [
+      {"title": "Dream Of Something Sweet [NCS Release]", "youtube": "https://www.youtube.com/watch?v=O9yeYhmXCAQ&list=RDO9yeYhmXCAQ&start_radio=1", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "4:30", "year": 2013, "genre": "Electronic"},
+      {"title": "Everybody [NCS Release]", "youtube": "https://www.youtube.com/watch?v=MM0lWsvieaE&list=RDMM0lWsvieaE&start_radio=1", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:13", "year": 2015, "genre": "Electronic"},
+      {"title": "Earth [NCS Release]", "youtube": "https://www.youtube.com/watch?v=dOo2jWb73JY&list=RDdOo2jWb73JY&start_radio=1", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:54", "year": 2016, "genre": "Electronic"},
+      {"title": "Summertime [Sunshine]", "youtube": "https://www.youtube.com/watch?v=25N1pdzvp4c&list=RD25N1pdzvp4c&start_radio=1", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "4:42", "year": 2014, "genre": "Electronic"}
+    ]
+  },
+  {
+    "artist": "Jim Yosef [NCS Release]",
+    "color": "#381a7d",
+    "songs": [
+      {"title": "Gone For Good [NCS Release]", "youtube": "https://www.youtube.com/watch?v=7kL7q4hfhLw&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:02", "year": 2023, "genre": "Electronic"},
+      {"title": "Just Getting Started [NCS Release]", "youtube": "https://www.youtube.com/watch?v=7TxpgmPJhm0&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=2", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "2:28", "year": 2023, "genre": "Electronic"},
+      {"title": "Volcano [NCS Release]", "youtube": "https://www.youtube.com/watch?v=VqaBmK4u0JI&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=3", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "2:40", "year": 2023, "genre": "Electronic"},
+      {"title": "Unforgivable [NCS Release]", "youtube": "https://www.youtube.com/watch?v=Z0LswWP3rGQ&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=4", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:00", "year": 2022, "genre": "Electronic"},
+      {"title": "Samurai [NCS Release]", "youtube": "https://www.youtube.com/watch?v=EZUPEoj3Qjs&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=5", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:20", "year": 2022, "genre": "Electronic"},
+      {"title": "Slow Down [NCS Release]", "youtube": "https://www.youtube.com/watch?v=cLqlA8iHxMM&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=6", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "2:29", "year": 2022, "genre": "Electronic"},
+      {"title": "Shudder [NCS Release]", "youtube": "https://www.youtube.com/watch?v=EnyiGmM5M7Y&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=8", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "2:28", "year": 2021, "genre": "Electronic"},
+      {"title": "Firefly pt. II [NCS Release]", "youtube": "https://www.youtube.com/watch?v=Q7E4Hiqe1s4&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=9", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:45", "year": 2020, "genre": "Electronic"},
+      {"title": "Fall With Me [NCS Release]", "youtube": "https://www.youtube.com/watch?v=BG_W8Z74nG8&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=10", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "2:48", "year": 2020, "genre": "Electronic"},
+      {"title": "Let You Go [NCS Release]", "youtube": "https://www.youtube.com/watch?v=7dw8wphQ118&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=11", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:40", "year": 2020, "genre": "Electronic"},
+      {"title": "Sun Goes Down [NCS Release]", "youtube": "https://www.youtube.com/watch?v=Hois2F0Jy2Y&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=12", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "2:48", "year": 2020, "genre": "Electronic"},
+      {"title": "Moonlight [NCS Release]", "youtube": "https://www.youtube.com/watch?v=MvTYrjX4ve4&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=14", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:35", "year": 2019, "genre": "Electronic"},
+      {"title": "Chasing Dreams [NCS Release]", "youtube": "https://www.youtube.com/watch?v=WkWY9ctNr0I&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=15", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:27", "year": 2018, "genre": "Electronic"},
+      {"title": "Ruby [NCS Release]", "youtube": "https://www.youtube.com/watch?v=Np-Y8ClGgRk&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=16", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:10", "year": 2018, "genre": "Electronic"},
+      {"title": "Imagine [NCS Release]", "youtube": "https://www.youtube.com/watch?v=6V1BWVNLCkU&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=17", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:00", "year": 2018, "genre": "Electronic"},
+      {"title": "Linked [NCS Release]", "youtube": "https://www.youtube.com/watch?v=yHLtE1wFeRQ&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=18", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:43", "year": 2017, "genre": "Electronic"},
+      {"title": "Courage [NCS Release]", "youtube": "https://www.youtube.com/watch?v=MReNmBOspAg&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=19", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:44", "year": 2017, "genre": "Electronic"},
+      {"title": "Speed [NCS Release]", "youtube": "https://www.youtube.com/watch?v=lP6mK2-nLIk&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=21", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:23", "year": 2017, "genre": "Electronic"},
+      {"title": "Canary [NCS Release]", "youtube": "https://www.youtube.com/watch?v=52R3Xy82nFc&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=22", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:19", "year": 2016, "genre": "Electronic"},
+      {"title": "Everlasting [NCS Release]", "youtube": "https://www.youtube.com/watch?v=MT814DNhy_U&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=23", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:58", "year": 2016, "genre": "Electronic"},
+      {"title": "Can't Wait [NCS Release]", "youtube": "https://www.youtube.com/watch?v=MqUCDzom5Xw&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=24", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:27", "year": 2016, "genre": "Electronic"},
+      {"title": "Forces [NCS Release]", "youtube": "https://www.youtube.com/watch?v=ZWOA6lQiETk&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=25", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "4:21", "year": 2016, "genre": "Electronic"},
+      {"title": "Eclipse [NCS Release]", "youtube": "https://www.youtube.com/watch?v=1WP_YLn1D1c&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=26", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:55", "year": 2015, "genre": "Electronic"},
+      {"title": "Arrow [NCS Release]", "youtube": "https://www.youtube.com/watch?v=5LI5QZVUU98&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=27", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:44", "year": 2015, "genre": "Electronic"},
+      {"title": "Firefly [NCS Release]", "youtube": "https://www.youtube.com/watch?v=x_OwcYTNbHs&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=28", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "4:16", "year": 2015, "genre": "Electronic"},
+      {"title": "Passion [NCS Release]", "youtube": "https://www.youtube.com/watch?v=pxEKoZKpCew&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=29", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:59", "year": 2015, "genre": "Electronic"},
+      {"title": "Lights [NCS Release]", "youtube": "https://www.youtube.com/watch?v=vb3ks4WllXA&list=PLRBp0Fe2GpgneKHLhDq36VQ-EQiteiPjR&index=30", "cover": "https://i1.sndcdn.com/artworks-000567890123-yzabcd-t500x500.jpg", "duration": "3:45", "year": 2015, "genre": "Electronic"}
     ]
   }
 ] 
