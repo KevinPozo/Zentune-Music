@@ -429,20 +429,20 @@ main {
 .song-item {
   background: transparent !important;
   border: 3px solid #00ffff !important;
-  box-shadow: 0 0 16px #00ffff, 0 0 32px #00ffff, 0 0 48px #00ffff !important;
+  box-shadow: 0 0 8px #00ffff, 0 0 16px #00ffff, 0 0 12px #00ffff !important;
   color: #fff !important;
 }
 .song-chip {
-  background: #FFFF00 !important; /* Amarillo neón */
+  background: #00e6fb !important; /* Amarillo neón */
   color: #222;
-  border: 2px solid #FF00FF !important;
-  box-shadow: 0 0 12px #FFFF00, 0 0 24px #FF00FF, 0 0 32px #FFFF00;
+  border: 3px solid rgb(0, 0, 0) !important;
+  box-shadow: 0 0 12px #00e6fb55, 0 0 24px #00ffff, 0 0 32px #00e6fb55;
   font-weight: bold;
 }
 .song-chip:hover {
-  background: #FF00FF !important;
+  background: #39FF14 !important;
   color: #fff;
-  box-shadow: 0 0 24px #FF00FF, 0 0 48px #FFFF00;
+  box-shadow: 0 0 24px #7dec6a, 0 0 48px #00e6fb55;
 }
 .visualizer-bar {
   background: linear-gradient(180deg, #39FF14 0%, #00FFFF 100%) !important;

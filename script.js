@@ -4,8 +4,6 @@ const resultsSection = document.getElementById('results');
 const audioPlayer = document.getElementById('audio-player');
 const nowPlaying = document.getElementById('now-playing');
 
-// Elimina el código anterior de búsqueda y FMA
-
 // Cambiar la constante GIF_URL a la ruta local
 const GIF_URL = 'assets/Fondo.gif';
 
